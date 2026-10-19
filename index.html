@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UI-елементи</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>UI-елементи: опис та приклади</h1>
+<p>Лабораторна робота з QC Fundamentals. На сторінці розміщено 10 UI-елементів, для кожного наведено призначення та приклад.</p>
+<h2>Черниш Олександр IП-з41</h2>
+
+<div class="block">
+  <h2>1. Radiobutton</h2>
+  <p>Radiobutton дозволяє вибрати лише один варіант із групи. Використовується для взаємовиключних виборів, наприклад стать або спосіб оплати. Кнопки однієї групи мають однакове ім’я, тому при виборі нового варіанта попередній знімається.</p>
+  <p>Стать:</p>
+  <input type="radio" name="gender" id="m" checked> <label for="m">Чоловіча</label>
+  <input type="radio" name="gender" id="f"> <label for="f">Жіноча</label>
+  <p>Спосіб оплати:</p>
+  <input type="radio" name="pay" id="card" checked> <label for="card">Картка</label>
+  <input type="radio" name="pay" id="cash"> <label for="cash">Готівка</label>
+  <input type="radio" name="pay" id="pp"> <label for="pp">PayPal</label>
+</div>
+
+<div class="block">
+  <h2>2. Checkbox</h2>
+  <p>Checkbox дозволяє вибрати один або кілька варіантів, кожен незалежно від інших. Використовується для інтересів, налаштувань, згоди з умовами.</p>
+  <p>Інтереси:</p>
+  <input type="checkbox" id="sport" checked> <label for="sport">Спорт</label>
+  <input type="checkbox" id="music"> <label for="music">Музика</label>
+  <input type="checkbox" id="art"> <label for="art">Мистецтво</label>
+  <p>Налаштування:</p>
+  <input type="checkbox" id="notif" checked> <label for="notif">Сповіщення</label>
+  <input type="checkbox" id="dark"> <label for="dark">Темна тема</label>
+</div>
+
+<div class="block">
+  <h2>3. Text input</h2>
+  <p>Text input служить для введення та редагування тексту. Використовується у формах, рядках пошуку, коментарях. Може бути однорядковим або багаторядковим</p>
+  <p>Ім’я:<br><input type="text" placeholder="Введіть ваше ім’я"></p>
+  <p>Пошук:<br><input type="text" placeholder="Пошук..."></p>
+  <p>Коментар:<br><textarea rows="4" cols="30" placeholder="Напишіть коментар..."></textarea></p>
+</div>
+
+<div class="block">
+  <h2>4. Tabs</h2>
+  <p>Tabs розділяють вміст на окремі розділи, які відкриваються кліком по заголовку. Використовуються для навігації між пов’язаними розділами, наприклад профіль і налаштування. Зменшують перевантаження сторінки.</p>
+  <div class="tabs">
+    <button class="tab active" onclick="openTab(event, 'tab1')">Профіль</button>
+    <button class="tab" onclick="openTab(event, 'tab2')">Налаштування</button>
+    <button class="tab" onclick="openTab(event, 'tab3')">Контакти</button>
+  </div>
+  <div id="tab1" class="tabcontent" style="display:block">Вміст профілю...</div>
+  <div id="tab2" class="tabcontent">Вміст налаштувань...</div>
+  <div id="tab3" class="tabcontent">Контактні дані...</div>
+</div>
+
+<div class="block">
+  <h2>5. Button</h2>
+  <p>Button виконує дію після натискання: зберегти, надіслати, видалити. Може мати різний стиль залежно від важливості дії. Недоступна кнопка не реагує на натискання.</p>
+  <button onclick="alert('Збережено')">Зберегти</button>
+  <button onclick="alert('Надіслано')">Надіслати</button>
+  <button onclick="alert('Видалено')">Видалити</button>
+  <button disabled>Недоступна</button>
+</div>
+
+<div class="block">
+  <h2>6. Text label</h2>
+  <p>Text label містить пояснювальний текст: назву поля, інструкцію або повідомлення про стан. Допомагає зрозуміти призначення інших елементів.</p>
+  <p><label for="email">Електронна пошта:</label> <input type="text" id="email"></p>
+  <p class="warn">Обов’язкове поле</p>
+  <p class="ok">Готово! Дані збережено.</p>
+</div>
+
+<div class="block">
+  <h2>7. Link</h2>
+  <p>Link переводить користувача на іншу сторінку або ресурс. Зазвичай підкреслене та виділене кольором. Може відкриватися в тій самій або в новій вкладці.</p>
+  <p><a href="https://www.google.com">Google</a></p>
+  <p><a href="https://uk.wikipedia.org">Вікіпедія</a></p>
+  <p><a href="#table">Перейти до таблиці на цій сторінці</a></p>
+</div>
+
+<div class="block">
+  <h2>8. Tooltip</h2>
+  <p>Tooltip показує додаткову інформацію при наведенні курсора на елемент. Використовується для пояснень без перевантаження інтерфейсу.</p>
+  <span class="tooltip">Наведіть на мене<span class="tooltiptext">Це підказка</span></span>
+  <span class="tooltip">?<span class="tooltiptext">Тут може бути довідка</span></span>
+</div>
+
+<div class="block">
+  <h2>9. Dropdown list</h2>
+  <p>Dropdown list дозволяє вибрати одне значення зі списку, що розкривається. Використовується для вибору країни, фільтрів, налаштувань. Економить місце на сторінці.</p>
+  <p>Країна:
+    <select>
+      <option>Україна</option>
+      <option>Польща</option>
+      <option>Німеччина</option>
+    </select>
+  </p>
+  <p>Колір:
+    <select>
+      <option>Червоний</option>
+      <option>Синій</option>
+      <option>Зелений</option>
+    </select>
+  </p>
+</div>
+
+<div class="block" id="table">
+  <h2>10. Data grid</h2>
+  <p>Data grid відображає дані у вигляді рядків і стовпців. Використовується в адмін-панелях, звітах, електронних таблицях. Може підтримувати сортування, пошук і редагування. Тут працює пошук за містом.</p>
+  <p>Пошук: <input type="text" id="filter" onkeyup="filterTable()" placeholder="Введіть місто"></p>
+  <table id="grid">
+    <tr><th>Місто</th><th>Країна</th><th>Населення, тис.</th></tr>
+    <tr><td>Київ</td><td>Україна</td><td>2967</td></tr>
+    <tr><td>Львів</td><td>Україна</td><td>717</td></tr>
+    <tr><td>Варшава</td><td>Польща</td><td>1863</td></tr>
+    <tr><td>Берлін</td><td>Німеччина</td><td>3677</td></tr>
+  </table>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

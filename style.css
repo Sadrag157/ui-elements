@@ -1,0 +1,106 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 0 15px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.block {
+  border: 1px solid black;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+textarea,
+select {
+  border: 1px solid black;
+  padding: 4px;
+  font-size: 16px;
+}
+
+button {
+  border: 1px solid black;
+  background-color: #eeeeee;
+  padding: 5px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:disabled {
+  color: gray;
+  cursor: not-allowed;
+}
+
+.tabs {
+  border-bottom: 1px solid black;
+}
+
+.tab.active {
+  background-color: black;
+  color: white;
+}
+
+.tabcontent {
+  display: none;
+  border: 1px solid black;
+  border-top: none;
+  padding: 10px;
+}
+
+.warn {
+  color: orange;
+}
+
+.ok {
+  color: green;
+}
+
+.tooltip {
+  position: relative;
+  border-bottom: 1px dotted black;
+  cursor: help;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 125%;
+  left: 0;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #dddddd;
+}
